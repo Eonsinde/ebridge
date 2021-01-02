@@ -1,0 +1,71 @@
+/* footer of the application */
+
+footer.main-footer{
+    background-color: #04091e;
+    color: white;
+}
+
+footer .row h6{
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.newsletter-form{
+
+}
+
+.newsletter-form > div{
+    display: flex;  
+}
+
+.newsletter-input{
+    background: #191919;
+    border: none;
+    padding: 6px 11px;
+    width: 100%;
+    outline: none;
+    color: #777;
+    font-size: initial;
+    transition: .5s ease;
+}
+
+.newsletter-input:focus{
+    color: rgb(88, 88, 88);
+}
+
+.newsletter-sub-btn{
+    border: none;
+    color: white;
+    padding: 4px 10px;
+    background: #8ab92d;
+}
+
+.social-icon{
+    font-size: 1.1rem;
+    margin: 0 7px;
+    color: white;
+    transition: .5s ease;
+}
+
+.social-icon:hover{
+    color: #8ab92d;
+}
+
+hr.demarcating-line{
+    margin: 0;
+    background: rgba(165, 165, 165, 0.322);
+    width: 57%;
+    margin: auto;
+}
+
+.footer-bottom{
+    /* border-top: 1px rgba(177, 177, 177, 0.164) solid; */
+}
+
+.footer-bottom > p{
+    font-weight: 500;
+    text-transform: uppercase;
+    color: whitesmoke;
+}

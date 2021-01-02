@@ -1,0 +1,30 @@
+.faq-body{
+    margin: 30px 0 60px 0;
+}
+
+.accordion{
+    color: whitesmoke;
+    /* background: #8ab92d; */
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+    /* border: 1px#8dbe29 solid; */
+    outline: none;
+}
+
+.accordion.active{
+    background-color: #8abe22;
+}
+
+.panel{
+    color: #777777;
+    background: #04091e;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+}
+
+.panel:hover{
+    color: #ccc;
+}

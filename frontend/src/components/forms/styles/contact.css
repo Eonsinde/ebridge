@@ -1,0 +1,108 @@
+.contact-container{
+    background: linear-gradient(to right, #072042ec,#060f31f5, #072042e3, #475e1aea, #536d22e5), url('../../../static/images/another_planet_2-wallpaper-2560x1440.jpg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* for all forms */
+form.contact-form{
+    width: 45%;
+    background: white;
+    box-shadow: 0px -1px 25px -5px rgba(0,0,0,0.75);
+    padding: 10px 30px;
+    margin: 20px 0;
+}
+
+label{
+    display: block;
+    color: rgb(214, 214, 214);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px rgb(133, 133, 133) solid;
+    background: transparent;
+    padding: 5px 0;
+    transition: border .5s ease;
+    font-size: 1.1rem;
+}
+
+input:focus-within{
+    color: rgb(124, 124, 124);
+    border-color: #e41b2f;
+}
+
+input[type='submit']{
+    width: 130px;
+}
+
+textarea.contact-textarea{
+    font-size: 1.1rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px rgb(170, 170, 170) solid;
+    background: transparent;
+}
+
+textarea.contact-textarea:focus-within{
+    outline: none;
+    color: rgb(124, 124, 124);
+    border-color:  #04091e;
+}
+
+.form-btn{
+    background: linear-gradient(to right,  #dc3545, #e41b2f, rgba(255, 123, 0, 0.76));
+    /* background: #dc3545; */
+    padding: 10px 18px;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    outline: none;
+    transition: .5s ease;
+}
+
+.form-btn:focus-within{
+    color: whitesmoke;
+}
+
+.form-btn:hover{
+    color: whitesmoke;
+    text-decoration: none;
+    box-shadow: 0 0 3px #000000bc;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.sending-spinner > i{
+    /* display: none; */
+    animation: rotate 1.7s forwards .2s infinite;
+}
+
+.form-sect{
+    margin: 0 0 25px 0;
+}
+
+@media screen and (max-width: 984px){
+    form.contact-form{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 584px){
+    form.contact-form{
+        width: 85%;
+    }
+}
+

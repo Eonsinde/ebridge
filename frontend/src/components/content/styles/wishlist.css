@@ -1,0 +1,30 @@
+.wishlist-body{
+    margin: 30px 0 80px 0;
+}
+
+.empty-wishlist{
+    border-radius: 3px;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.175);
+}
+
+.empty-wishlist-content{
+    color: rgb(46, 46, 46);
+    text-align: center;
+}
+
+
+.empty-wishlist-content i{
+    font-size: 5.5rem;
+}
+
+.remove-item-btn{
+    color: rgb(206, 40, 40);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+.remove-item-btn:hover{
+    color: rgb(212, 39, 39);
+
+}

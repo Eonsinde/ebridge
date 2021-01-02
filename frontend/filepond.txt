@@ -1,0 +1,73 @@
+<FilePond
+    // ref={ref => this.pond = ref}
+    allowMultiple={false}
+    files={values.image} 
+    server={{
+            process: {
+                url: './api/temp-upload',
+                method: "POST",
+                onload: (response) => {
+                    handleChange('image', response);
+                }
+            },
+            load: (source, load, error, progress, abort, headers) => {
+                console.log("I'm trying yo use the load method now", source);
+                axios.get('/api/temp-upload')
+                    .then(res => {
+                        console.log("Here's the server's response on load");
+                        progress(true, 0, 1024);
+                        load(res.data);
+                    })
+                    .catch(err => {
+                        error('Error in loading data from server');
+                    });
+    
+                return {
+                    abort: () => {
+                        abort();
+                    }
+                };
+            },
+            // load: {
+            //     url: '/api/temp-upload',
+            //     method: 'GET',
+            //     withCredentials: false,
+            // },
+            // restore: (uniqueFileId, load, error, progress, abort, headers) => {
+            //     alert("I'm here using restore");
+            //     axios.get(`/api/temp-upload?restore=${uniqueFileId}`)
+            //         .then(res => {
+            //             console.log('Server\'s response on restore request', res);
+            //             progress(true, 0, 1024);
+            //             load(res.data);
+            //         })
+            //         .catch(err => {
+            //             console.log('Failed to restore');
+            //             error('oh my goodness! failed to restore data');
+            //         })
+            //     // headers(headersString);
+            //     return {
+            //         abort: () => {
+            //             abort();
+            //         }
+            //     };
+            // },
+            revert: (uniqueFileId, load, error) => {
+                axios.delete(`/api/temp-upload/${uniqueFileId}`)
+                    .then(res => {
+                        load();
+                    })
+                    .catch(err => {
+                        error('Failed to delete');
+                    });
+            }
+    }}
+    onupdatefiles={(fileItems) => {
+        if (fileItems.length !== 0){
+            handleImageUpload('image', fileItems[0].file);
+            handleImageUpload('image_name', fileItems[0].file.name);
+            // handleImageUpload('image', fileItems[0].file);
+            // this.setState({image: fileItems[0].file});
+        }
+    }}
+/>

@@ -1,0 +1,111 @@
+@font-face {
+  font-family: myFont;
+  src: url('./static/Poppins-Regular.ttf');
+}
+
+
+:root{
+  /* --app-theme: linear-gradient(to right, #dc3546c0, #e41b2ff5, rgba(255, 123, 0, 0.767));
+  --app-dark-theme: #2b2a2a; */
+  --app-light-theme: #8ab92d;
+  --app-dark-blue-theme:#04091e;
+  --app-dark-theme: #222222;
+}
+ 
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #777777;
+  font-family: myFont;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+  position: relative;
+}
+
+.text-app-light-theme{
+  color: #8ab92d;
+}
+
+.text-app-dark-theme{
+  color: #8ab92d;
+}
+
+
+.hide-scrollbar{
+  overflow: hidden;
+}
+
+.section-gap{
+  padding: 120px 0;
+}
+
+
+.bg-dark-theme{
+  background-color: #222222;
+}
+
+.overflow-y-hidden{
+  overflow-y: hidden;
+}
+
+.clr{
+  clear: both;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.my-btn{
+  border: none;
+  color: whitesmoke;
+}
+
+.my-btn-app-theme{
+  border-radius: 15px;
+  background: linear-gradient(to right,  #dc3545, #e41b2f, #e41b2f, rgba(255, 123, 0, 0.884));
+}
+
+.my-btn-lg{
+  padding: 10px;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  background: linear-gradient(to right,  #dc3545, #e41b2f, #e41b2f, rgba(255, 123, 0, 0.884));
+}
+
+.my-btn-md{
+  padding: 7px 10px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  background: linear-gradient(to right,  #dc3545, #e41b2f, #e41b2f, rgba(255, 123, 0, 0.884));
+}
+
+.my-btn-sm{
+  padding: 5px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  background: linear-gradient(to right,  #dc3545, #e41b2f, #e41b2f, rgba(255, 123, 0, 0.884));
+}
+
+.my-btn-app-theme:hover{
+  color: whitesmoke;
+}
+
+
+/* header.main-header{
+  height: 70vh;
+  margin-top: 52px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-content > div > h2, p{
+  color: rgb(53, 53, 53);
+} 
+*/

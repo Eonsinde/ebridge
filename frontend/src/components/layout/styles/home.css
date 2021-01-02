@@ -1,0 +1,203 @@
+/* for the banner section of the application */
+
+.banner-area{
+    position: relative;
+    background: url('../../../static/images/header-bg.jpg') no-repeat center/cover;
+}
+
+.banner-area::before{
+    content: "";
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: rgba(4, 9, 30, 0.5);
+}
+
+@keyframes bannerContentAnime{
+    100%{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+.banner-content{
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px 0 ;
+    margin-top: 100px;
+    opacity: .3;
+    animation: 1s bannerContentAnime .1s forwards;
+}
+
+.banner-content > h5{
+    color:  #8ab92d;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.banner-content > h1{
+    font-size: 72px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.banner-content > a{
+    color: white;
+    background:  #8ab92d;
+    padding: 9px 40px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+
+.banner-content > a:hover{
+    text-decoration: none;
+    border-color: whitesmoke;
+    color: whitesmoke;
+    background: transparent;
+}
+
+@media screen and (max-width: 768px){
+    .banner-content > h1{
+        font-size: 67px;
+    }
+}
+
+
+/* for the filter section of the application */
+
+.ads-showcase .menu-content h1{
+    color: #222222;
+    line-height: 1.2em !important;
+    font-weight: 600;
+}
+
+.ads-showcase .filters {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.ads-showcase .filters ul {
+    padding: 0;
+    list-style: none;
+}
+
+.ads-showcase .filters ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px 30px;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    color: #222;
+    font-weight: 500;
+}
+
+.ads-showcase .filters ul li.active {
+    color: #8ab92d;
+}
+
+.ads-showcase .filters ul li:after {
+    content: "";
+    display: block;
+    width: calc(0% - 60px);
+    position: absolute;
+    height: 2px;
+    background: #333;
+    transition: width 350ms ease-out;
+}
+
+.ads-showcase .filters ul li:hover:after {
+    width: calc(100% - 60px);
+    transition: width 350ms ease-out;
+}
+
+.ads-showcase .filters-content{
+    margin-top: 50px;
+}
+
+.ads-showcase .filters-content .item {
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.ads-showcase .filters-content .item .p-inner {
+    padding: 20px 0px;
+}
+
+
+/* for the service-area section of our application */
+.service-area{
+    position: relative;
+    background: url('../../../static/images/another_planet_2-wallpaper-2560x1440.jpg') no-repeat center/cover;
+}
+
+.service-area:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(4, 9, 30, 0.8);
+    border-radius: inherit;
+}
+
+.service-area .menu-content{
+    padding-bottom: 60px;
+    z-index: 1;
+}
+
+
+/* for the services area of the application */
+.services-area{
+    margin-top: -100px;
+    padding-bottom: 100px;
+}
+
+.single-service {
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 10px 30px 0px rgba(138, 185, 45, 0.2);
+}
+
+.single-service-icon{
+    margin: 10px 0 15px 0;
+    color: #6e9225d0;
+}
+
+
+/* review area of the application */
+.review-area{
+
+}
+
+.review-area .menu-content hr{
+    background: #8ab92d;
+    width: 10%;
+    margin: 30px auto;
+}
+
+.single-review .title {
+    padding: 20px 0;
+}
+
+.single-review .title a{
+    
+}
+
+.single-review .title a:hover{
+    text-decoration-color:  rgba(4, 9, 30, 0.8);
+}
+
+.single-review h4 {
+    color: #222;
+}
